@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+    <h1>Calculator</h1>
+    Num1<input type="number" id="one" placeholder="Type val 1"><br><br>
+    Num2<input type="number" id="two" placeholder="Type val 2"><br><br>
+    <button onclick="add()" >ADD</button>
+    <button ondblclick="sub()">SUB</button>
+    <button onmouseover="mul()">MUL</button>
+    <button onkeydown="div()">DIV</button><br><br>
+    Result<input readonly id="ans">
+</body>
+<script>
+    function add()
+    {
+        let a=document.getElementById("one").value
+        let b=document.getElementById("two").value
+        let c=parseInt(a)+parseInt(b)
+        document.getElementById("ans").value=c
+    }
+    function sub()
+    {
+        let a=document.getElementById("one").value
+        let b=document.getElementById("two").value
+        let c=parseInt(a)-parseInt(b)
+        document.getElementById("ans").value=c
+    }
+    function mul()
+    {
+        let a=document.getElementById("one").value
+        let b=document.getElementById("two").value
+        let c=parseInt(a)*parseInt(b)
+        document.getElementById("ans").value=c
+    }
+    function div()
+    {
+        let a=document.getElementById("one").value
+        let b=document.getElementById("two").value
+        let c=parseInt(a)/parseInt(b)
+        document.getElementById("ans").value=c
+    }
+
+</script>
+<style>
+    body{
+    background-image: url(images/maths.jpg) ;
+    background-size: cover;
+    margin-left: 250px;
+    margin-top: 200px;
+    font-size: larger;
+}
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 50px;
+    
+}
+input{
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+}
+input:hover{
+    background-color: rgb(37, 108, 189);
+    border-radius: 10px;
+    transition-duration: 1s;
+    border-width: 3px;
+    border-style: dashed;
+    color: white;
+}
+button{
+    border-radius: 20px;
+    width: 70px;
+    height: 30px;
+    border-color: black;
+    border-width: 3px;
+    background-color: aqua;
+    
+}
+button:hover{
+    letter-spacing: 3px;
+    background-color: blueviolet;
+    color: aliceblue;
+    height: 40px;
+    width: 80px;
+    transition-duration: 1s;
+}
+
+</style>
+</html>
